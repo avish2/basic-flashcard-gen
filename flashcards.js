@@ -13,7 +13,7 @@ function openMenu() {
   inquirer.prompt([														
       {
           type: "list",														
-          message: "Choose a menu option from the list below?",	
+          message: "Choose a menu option from the list below:",	
           choices: ["Create a Flashcard", "Go Through All Flashcards", "One Random Flashcard", "Shuffle All Flashcards for Later Use", "Show All Flashcards", "Exit"],	
           name: "menuOptions"												
       }
