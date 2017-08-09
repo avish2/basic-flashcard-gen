@@ -126,7 +126,7 @@ function createCard() {
 
                 {
                     type: "input",
-                    message: "Please type the portion of text you want to cloze, replacing it with '...'.",
+                    message: "Please type the portion of text you want to cloze. This part will be replaced with '...'.",
                     name: "cloze"
                 }
 
@@ -188,20 +188,21 @@ function askQuestions() {
         ]).then(function (answer) {				
         	//if the users answer equals .back or .cloze of the playedCard run a message "You are correct."
             if (answer.question === library[count].back || answer.question === library[count].cloze) {
-                console.log(colors.green("You are correct."));
+                console.log(colors.green("You are correct!"));
             } else {
                 if (drawnCard.front !== undefined) { //if card has a front then it is a Basic card
-                    console.log(colors.red("Sorry, the correct answer was ") + library[count].back + "."); //grabs & shows correct answer
+                    console.log(colors.red("Sorry, the correct answer was ") + library[count].back); //grabs & shows correct answer
                 } else { // otherwise it is a Cloze card
-                    console.log(colors.red("Sorry, the correct answer was ") + library[count].cloze + ".");//grabs & shows correct answer
+                    console.log(colors.red("Sorry, the correct answer was ") + library[count].cloze);//grabs & shows correct answer
                 }
             }
             count++; 		//increase the counter for the next run through
             askQuestions();         //recursion
         });
     } else {
+        console.log("THE END!");
       	count=0;			//reset counter to 0 once loop ends
-      	openMenu();			
+      	setTimeout(openMenu, 2000);			
     }
 };
 
@@ -215,9 +216,27 @@ function shuffleDeck() {
       newDeck[i] = shuffled;
   }
   fs.writeFile("cardLibrary.json", JSON.stringify(newDeck, null, 2)); //write the new randomized array over the old one
-  console.log(colors.cyan("The deck of flashcards have been shuffled"));
-  //openMenu();  //shuffle only works on app reload
-}
+  console.log(colors.cyan("The deck of flashcards has been shuffled\nRestart the application to run through the shuffled cards")); //card Indx values do not update until app is restarted
+//   inquirer.prompt([
+//         {
+//             type: "list",
+//             message: "Would you like to run through the shuffled cards now?",
+//             choices: ["Yes", "No"],
+//             name: "shuffleRun"
+//         }
+
+//     ]).then(function (appData) {
+
+//         var shuffleRun = appData.shuffleRun;  			//the variable shuffleRun will store the choice from the shuffleRun inquirer object.		  			
+
+//         if (shuffleRun === "Yes") {
+//             console.log("Starting at the beginning:");
+//             waitMsg = setTimeout(askQuestions, 1000);
+//         } else {								
+//             openMenu();			
+//         }
+//     });
+};
 
 function randomCard() {
   var randomNumber = Math.floor(Math.random() * (library.length - 1));  // get a random index number within the length of the current library
@@ -232,14 +251,14 @@ function randomCard() {
         ]).then(function (answer) {					
             if (answer.question === library[randomNumber].back || answer.question === library[randomNumber].cloze) {
                 console.log(colors.green("You are correct!"));
-                setTimeout(openMenu, 1000);
+                	setTimeout(openMenu, 2000);
             } else {
-                if (drawnCard.front !== undefined) { //if card has a front then it is a Basic card
-                    console.log(colors.red("Sorry, the correct answer was ") + library[randomNumber].back + "."); //grabs & shows correct answer
-                    setTimeout(openMenu, 1000);
+                if (drawnCard.front !== undefined) { 
+                    console.log(colors.red("Sorry, the correct answer was ") + library[randomNumber].back); 
+                    	setTimeout(openMenu, 2000);
                 } else { 
-                    console.log(colors.red("Sorry, the correct answer was ") + library[randomNumber].cloze + ".");//grabs & shows correct answer
-                    setTimeout(openMenu, 1000);
+                    console.log(colors.red("Sorry, the correct answer was ") + library[randomNumber].cloze);
+                    	setTimeout(openMenu, 2000);
                 }
             }
         });

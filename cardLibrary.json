@@ -1,53 +1,8 @@
 [
   {
     "type": "ClozeCard",
-    "text": "Don Pardo has been the announcer for Saturday Night Live since it's debut.",
-    "cloze": "Don Pardo"
-  },
-  {
-    "type": "ClozeCard",
-    "text": "'Blade Runner'is based on Philip K. Dick's novel 'Do Androids Dream of Electric Sheep?'.",
-    "cloze": "Blade Runner"
-  },
-  {
-    "type": "BasicCard",
-    "front": "Who is the best selling author of all time?",
-    "back": "William Shakespeare"
-  },
-  {
-    "type": "ClozeCard",
-    "text": "The Flinstones (1960-1996) is regarded as thefirst primetime animated series, and it was themost successful until 'The Simpsons' came around in 1989.",
+    "text": "The Flinstones (1960-1996) is regarded as the first primetime animated series, and it was themost successful until 'The Simpsons' came around in 1989.",
     "cloze": "The Flinstones"
-  },
-  {
-    "type": "BasicCard",
-    "front": "Who was the first white artist to perform on 'Soul Train' in 1979?",
-    "back": "Elton John"
-  },
-  {
-    "type": "BasicCard",
-    "front": "Before making it big, Brad Pitt appeared in a commercial for what popular potato chips?",
-    "back": "Pringles"
-  },
-  {
-    "type": "ClozeCard",
-    "front": "In 2007, Beyoncé Knowles became the first nonmodel/nonathlete to grace the cover of the Sports Illustrated Swimsuit Issue. She is also the second African American woman to be featured on its cover.",
-    "back": "Beyoncé Knowles"
-  },
-  {
-    "type": "ClozeCard",
-    "text": "Debuting in 1960, The Family Circus is themost widely syndicated cartoon panel in the world, appearing in 1,500 newspapers.",
-    "cloze": "The Family Circus"
-  },
-  {
-    "type": "ClozeCard",
-    "text": "60 Minutes was the first network TV show without theme music, if you don't cound the ticking clock.",
-    "cloze": "60 Minutes"
-  },
-  {
-    "type": "BasicCard",
-    "front": "Who portrayed the first openly gay character on primetime television, as Jodie Dallas on 'Soap'?",
-    "back": "Billy Crystal"
   },
   {
     "type": "ClozeCard",
@@ -56,7 +11,12 @@
   },
   {
     "type": "BasicCard",
-    "front": "The first time TV audiences heard the swear word 'hell' was in a 1967 episode of what popular science fiction series?",
-    "back": "Star Trek"
+    "front": "Who is the best selling author of all time?",
+    "back": "William Shakespeare"
+  },
+  {
+    "type": "ClozeCard",
+    "text": "60 Minutes was the first network TV show without theme music, if you don't cound the ticking clock.",
+    "cloze": "60 Minutes"
   }
 ]
