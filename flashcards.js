@@ -47,7 +47,7 @@ function openMenu() {
             break;
 
         case 'Exit':
-            console.log("\nThank you for using the Basic-Flashcard-Generator. Bye!\n")
+            console.log(colors.blue("\nThank you for using the Basic-Flashcard-Generator. Bye!\n"));
             return;
             break;
 
